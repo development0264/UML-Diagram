@@ -4,9 +4,21 @@ import "./App.css";
 import {
   ConnectorModel,
   DiagramComponent,
+  DiagramConstraints,
+  NodeConstraints,
   NodeModel,
   SnapConstraints
 } from "@syncfusion/ej2-react-diagrams";
+
+import styled from 'styled-components';
+interface strokeProps {
+  stroke: String;
+};
+const DiagramComponentCustom = styled.div`
+    #diagram_diagramLayer #NewIdea_content_groupElement :hover {
+      stroke: red ;
+    }
+`
 
 // A node is created and stored in nodes array.
 let node: NodeModel[] = [
@@ -17,14 +29,17 @@ let node: NodeModel[] = [
     offsetX: 300,
     style: {
       strokeWidth: 2,
+      
     },
     offsetY: 80,
     shape: { type: "UmlActivity", shape: "Action" },
     annotations: [
       {
         content: "Airlines",
+      
       },
     ],
+    constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
   },
   {
     id: "NewIdea2",
@@ -41,6 +56,7 @@ let node: NodeModel[] = [
         content: "Airports",
       },
     ],
+    constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
   },
   {
     id: "NewIdea3",
@@ -57,6 +73,7 @@ let node: NodeModel[] = [
         content: "Countries",
       },
     ],
+    constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
   },
   {
     id: "NewIdea4",
@@ -73,7 +90,9 @@ let node: NodeModel[] = [
         content: "Airlines Groups",
       },
     ],
+    constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
   },
+  
   {
     id: "NewIdea5",
     height: 25,
@@ -89,6 +108,7 @@ let node: NodeModel[] = [
         content: "",
       },
     ],
+     constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select| NodeConstraints.Tooltip), 
   },
   {
     id: "NewIdea6",
@@ -105,22 +125,28 @@ let node: NodeModel[] = [
         content: "Manufacture",
       },
     ],
+     constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
   },
   {
     id: "NewIdea7",
-    height: 25,
-    width: 45,
+    height: 30,
+    width: 55,
     style: {
       strokeWidth: 2,
     },
     offsetX: 500,
-    offsetY: 155,
+    offsetY: 220,
+    rotateAngle:337,
     shape: { type: "UmlActivity", shape: "Decision" },
     annotations: [
       {
-        content: "",
+        content: "test",
       },
     ],
+   tooltip:{
+
+   },
+    constraints:( NodeConstraints.Default | NodeConstraints.Tooltip) &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select| NodeConstraints.Tooltip), 
   },
   {
     id: "NewIdea8",
@@ -129,14 +155,37 @@ let node: NodeModel[] = [
     style: {
       strokeWidth: 2,
     },
-    offsetX: 700,
-    offsetY: 155,
+    offsetX: 760,
+    offsetY: 130,
+    rotateAngle:343,
     shape: { type: "UmlActivity", shape: "Decision" },
     annotations: [
       {
         content: "",
       },
     ],
+    tooltip:{
+      content:"this is test2"
+         },
+   constraints: ( NodeConstraints.Default | NodeConstraints.Tooltip) &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
+  },
+  {
+    id: "NewIdea9",
+    height: 25,
+    width: 45,
+    style: {
+      strokeWidth: 2,
+    },
+    offsetX: 595,
+    offsetY: 185,
+    rotateAngle:343,
+    shape: { type: "UmlActivity", shape: "Decision" },
+    annotations: [
+      {
+        content: "",
+      },
+    ],
+  constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select| NodeConstraints.Tooltip), 
   },
 ];
 
@@ -148,6 +197,7 @@ let connectors: ConnectorModel[] = [
     style: {
       strokeWidth: 2,
     },
+     constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
   },
   {
     id: "connector2",
@@ -156,6 +206,7 @@ let connectors: ConnectorModel[] = [
     style: {
       strokeWidth: 2,
     },
+   constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
   },
   {
     id: "connector3",
@@ -168,6 +219,7 @@ let connectors: ConnectorModel[] = [
       strokeWidth: 2,
       strokeDashArray: "5,5",
     },
+    constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
   },
   {
     id: "connector4",
@@ -180,6 +232,7 @@ let connectors: ConnectorModel[] = [
       strokeWidth: 2,
       strokeDashArray: "5,5",
     },
+   constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
   },
   {
     id: "connector5",
@@ -192,18 +245,20 @@ let connectors: ConnectorModel[] = [
       strokeWidth: 2,
       strokeDashArray: "5,5",
     },
+ constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
   },
   {
     id: "connector6",
     sourceID: "NewIdea7",
     sourcePortID: "NewIdea7",
-    targetID: "NewIdea8",
-    targetPortID: "NewIdea8",
+    targetID: "NewIdea9",
+    targetPortID: "NewIdea9",
     type: "Straight",
     style: {
       strokeWidth: 2,
       strokeDashArray: "5,5",
     },
+    constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
   },
   {
     id: "connector7",
@@ -216,6 +271,7 @@ let connectors: ConnectorModel[] = [
       strokeWidth: 2,
       strokeDashArray: "5,5",
     },
+   constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
   },
   {
     id: "connector8",
@@ -228,13 +284,28 @@ let connectors: ConnectorModel[] = [
       strokeWidth: 2,
       strokeDashArray: "5,5",
     },
-  }
+    constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
+  },
+  {
+    id: "connector9",
+    sourceID: "NewIdea9",
+    sourcePortID: "NewIdea9",
+    targetID: "NewIdea8",
+    targetPortID: "NewIdea8",
+    type: "Straight",
+    style: {
+      strokeWidth: 2,
+      strokeDashArray: "5,5",
+    },
+constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select), 
+  },
 ];
 
 export default class App extends React.Component<{}, {}> {
   render() {
     return (
       <div >
+      <DiagramComponentCustom>
         <DiagramComponent
           id="diagram"
           className="sb-mobile-palette-bar"
@@ -243,9 +314,13 @@ export default class App extends React.Component<{}, {}> {
           // Add node
           connectors={connectors}
           nodes={node}
+          constraints = {
+            DiagramConstraints.Default 
+        }
           snapSettings={{ constraints: SnapConstraints.None }}
         // render initialized Diagram
         />
+        </DiagramComponentCustom>
       </div>
     );
   }

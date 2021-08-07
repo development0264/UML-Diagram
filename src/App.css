@@ -40,10 +40,27 @@
   }
 }
 
-#diagram_diagramLayer :hover {
+/* #diagram_diagramLayer #NewIdea_content_groupElement :hover {
   stroke: green;
 }
 
-#diagram_diagramLayer {
-  stroke: red;
+#diagram_diagramLayer #NewIdea2_content_groupElement :hover {
+  stroke: yellow;
 }
+
+#diagram_diagramLayer #NewIdea3_content_groupElement :hover {
+  stroke: blue;
+}
+
+#diagram_diagramLayer #NewIdea4_content_groupElement :hover {
+  stroke: pink;
+}
+
+#diagram_diagramLayer #NewIdea6_content_groupElement :hover {
+  stroke: purple;
+}  */
+
+/* .NewIdea_content_groupElement :hover{
+  stroke: red;
+} */
+
