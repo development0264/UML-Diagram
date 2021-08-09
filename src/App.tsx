@@ -11,14 +11,14 @@ import {
 } from "@syncfusion/ej2-react-diagrams";
 
 import styled from 'styled-components';
-interface strokeProps {
-  stroke: String;
-};
-const DiagramComponentCustom = styled.div`
-    #diagram_diagramLayer #NewIdea_content_groupElement :hover {
-      stroke: red ;
-    }
-`
+// interface strokeProps {
+//   stroke: String;
+// };
+// const DiagramComponentCustom = styled.div`
+//     #diagram_diagramLayer #NewIdea_content_groupElement :hover {
+//       stroke: red ;
+//     }
+// `
 
 // A node is created and stored in nodes array.
 let node: NodeModel[] = [
@@ -305,7 +305,7 @@ export default class App extends React.Component<{}, {}> {
   render() {
     return (
       <div >
-      <DiagramComponentCustom>
+      {/* <DiagramComponentCustom> */}
         <DiagramComponent
           id="diagram"
           className="sb-mobile-palette-bar"
@@ -320,7 +320,7 @@ export default class App extends React.Component<{}, {}> {
           snapSettings={{ constraints: SnapConstraints.None }}
         // render initialized Diagram
         />
-        </DiagramComponentCustom>
+        {/* </DiagramComponentCustom> */}
       </div>
     );
   }

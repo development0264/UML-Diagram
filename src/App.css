@@ -40,7 +40,7 @@
   }
 }
 
-/* #diagram_diagramLayer #NewIdea_content_groupElement :hover {
+#diagram_diagramLayer #NewIdea_content_groupElement :hover {
   stroke: green;
 }
 
@@ -58,9 +58,7 @@
 
 #diagram_diagramLayer #NewIdea6_content_groupElement :hover {
   stroke: purple;
-}  */
+}  
 
-/* .NewIdea_content_groupElement :hover{
-  stroke: red;
-} */
+
 
