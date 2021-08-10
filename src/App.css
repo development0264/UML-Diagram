@@ -40,25 +40,39 @@
   }
 }
 
-#diagram_diagramLayer #NewIdea_content_groupElement :hover {
+/* #NewIdea_groupElement:hover , #NewIdea_groupElement:hover *{
   stroke: green;
 }
-
-#diagram_diagramLayer #NewIdea2_content_groupElement :hover {
-  stroke: yellow;
+#NewIdea_groupElement:hover text {
+  fill: green !important;
+} */
+/* #NewIdea2_groupElement,#NewIdea2_groupElement:hover * {
+  stroke: yellow !important;
+}
+#NewIdea2_groupElement:hover text {
+  fill: yellow !important;
 }
 
-#diagram_diagramLayer #NewIdea3_content_groupElement :hover {
+#NewIdea3_groupElement,#NewIdea3_groupElement:hover * {
   stroke: blue;
 }
-
-#diagram_diagramLayer #NewIdea4_content_groupElement :hover {
-  stroke: pink;
+#NewIdea3_groupElement:hover text {
+  fill: blue !important;
 }
 
-#diagram_diagramLayer #NewIdea6_content_groupElement :hover {
+#NewIdea4_groupElement,#NewIdea4_groupElement:hover *{
+  stroke: pink;
+}
+#NewIdea4_groupElement:hover text {
+  fill: pink !important;
+}
+
+#NewIdea6_groupElement,#NewIdea6_groupElement:hover *{
   stroke: purple;
-}  
+} 
+#NewIdea6_groupElement:hover text {
+  fill: purple !important;
+}  */
 
 
 

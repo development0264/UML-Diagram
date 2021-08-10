@@ -11,14 +11,39 @@ import {
 } from "@syncfusion/ej2-react-diagrams";
 
 import styled from 'styled-components';
-// interface strokeProps {
-//   stroke: String;
-// };
-// const DiagramComponentCustom = styled.div`
-//     #diagram_diagramLayer #NewIdea_content_groupElement :hover {
-//       stroke: red ;
-//     }
-// `
+
+interface ColorProps{
+  color:String;
+  nodeName:String;
+}
+interface Props{
+  colors: Array<ColorProps>;
+  
+}
+// export const DivCustom:React.FC <Props> = ({children}) => {
+//   console.log("colors :  ",children);
+//   return (
+//      <div>{children}</div>
+//   )
+// }
+const DiagramComponentCustom = styled.div<Props>` 
+${props=>props.colors.map(item=>
+  `#${item.nodeName}_groupElement:hover , #${item.nodeName}_groupElement:hover *{
+    stroke: ${item.color};
+  }
+  #${item.nodeName}_groupElement:hover text {
+    fill: ${item.color} !important;
+  }`
+  )}
+
+`
+
+// #NewIdea_groupElement:hover , #NewIdea_groupElement:hover *{
+//   stroke: ${props=>props.color};
+// }
+// #NewIdea_groupElement:hover text {
+//   fill:   ${props=>props.color} !important;
+// }
 
 // A node is created and stored in nodes array.
 let node: NodeModel[] = [
@@ -305,7 +330,7 @@ export default class App extends React.Component<{}, {}> {
   render() {
     return (
       <div >
-      {/* <DiagramComponentCustom> */}
+      <DiagramComponentCustom colors={[{nodeName:"NewIdea",color:"green"},{nodeName:"NewIdea2",color:"red"},{nodeName:"NewIdea3",color:"blue"},{nodeName:"NewIdea4",color:"purple"},{nodeName:"NewIdea6",color:"yellow"}]}>
         <DiagramComponent
           id="diagram"
           className="sb-mobile-palette-bar"
@@ -320,7 +345,7 @@ export default class App extends React.Component<{}, {}> {
           snapSettings={{ constraints: SnapConstraints.None }}
         // render initialized Diagram
         />
-        {/* </DiagramComponentCustom> */}
+        </DiagramComponentCustom>
       </div>
     );
   }
