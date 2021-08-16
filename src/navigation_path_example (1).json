@@ -1,0 +1,205 @@
+{
+  "data": {
+    "history": {
+      "name": "Test History",
+      "navigations": [
+        {
+          "name": "Example_B",
+          "paths": [
+            {
+              "name": "B2",
+              "nodes": [
+                {
+                  "name": "Airline"
+                },
+                {
+                  "name": "Country"
+                }
+              ],
+              "edges": [
+                {
+                  "name": "located in",
+                  "start": {
+                    "name": "Airline"
+                  },
+                  "end": {
+                    "name": "Country"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "B1",
+              "nodes": [
+                {
+                  "name": "Country"
+                },
+                {
+                  "name": "Airport"
+                }
+              ],
+              "edges": [
+                {
+                  "name": "located in",
+                  "start": {
+                    "name": "Airport"
+                  },
+                  "end": {
+                    "name": "Country"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Example_A",
+          "paths": [
+            {
+              "name": "A1",
+              "nodes": [
+                {
+                  "name": "Country"
+                },
+                {
+                  "name": "Airport"
+                }
+              ],
+              "edges": [
+                {
+                  "name": "located in",
+                  "start": {
+                    "name": "Airport"
+                  },
+                  "end": {
+                    "name": "Country"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Example_D",
+          "paths": [
+            {
+              "name": "D2",
+              "nodes": [
+                {
+                  "name": "Country"
+                },
+                {
+                  "name": "Airport"
+                }
+              ],
+              "edges": [
+                {
+                  "name": "located in",
+                  "start": {
+                    "name": "Airport"
+                  },
+                  "end": {
+                    "name": "Country"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "D1",
+              "nodes": [
+                {
+                  "name": "Airline"
+                },
+                {
+                  "name": "Airport"
+                }
+              ],
+              "edges": [
+                {
+                  "name": "landing at",
+                  "start": {
+                    "name": "Airline"
+                  },
+                  "end": {
+                    "name": "Airport"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "D3",
+              "nodes": [
+                {
+                  "name": "Airline"
+                },
+                {
+                  "name": "Country"
+                }
+              ],
+              "edges": [
+                {
+                  "name": "located in",
+                  "start": {
+                    "name": "Airline"
+                  },
+                  "end": {
+                    "name": "Country"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Example_C",
+          "paths": [
+            {
+              "name": "C1",
+              "nodes": [
+                {
+                  "name": "Airline"
+                },
+                {
+                  "name": "Airport"
+                }
+              ],
+              "edges": [
+                {
+                  "name": "landing at",
+                  "start": {
+                    "name": "Airline"
+                  },
+                  "end": {
+                    "name": "Airport"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "C2",
+              "nodes": [
+                {
+                  "name": "Country"
+                },
+                {
+                  "name": "Airport"
+                }
+              ],
+              "edges": [
+                {
+                  "name": "located in",
+                  "start": {
+                    "name": "Airport"
+                  },
+                  "end": {
+                    "name": "Country"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

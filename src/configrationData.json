@@ -1,0 +1,163 @@
+[
+    {
+        "id": "NewIdea",
+        "height": 35,
+        "width": 80,
+        "offsetX": 300,
+        "style": {
+         "strokewidth": 2  
+        },
+       "offsetY": 80,
+        "shape": { "type": "UmlActivity", "shape": "Action" },
+        "annotations": [
+          {
+            "content": "Airlines"
+          
+          }
+       ]
+       
+      },
+      {
+        "id": "NewIdea2",
+        "height": 35,
+        "width": 80,
+        "style": {
+         "strokewidth": 2
+        },
+        "offsetX": 600,
+       "offsetY": 80,
+        "shape": { "type": "UmlActivity", "shape": "Action" },
+        "annotations": [
+          {
+            "content": "Airports"
+          }
+       ]
+       
+      },
+      {
+        "id": "NewIdea3",
+        "height": 35,
+        "width": 80,
+        "style": {
+         "strokewidth": 2
+        },
+        "offsetX": 900,
+       "offsetY": 80,
+        "shape": { "type": "UmlActivity", "shape": "Action" },
+        "annotations": [
+          {
+            "content": "Countries"
+          }
+       ]
+       
+      },
+      {
+        "id": "NewIdea4",
+        "height": 35,
+        "width": 80,
+        "style": {
+         "strokewidth": 2
+        },
+        "offsetX": 350,
+       "offsetY": 280,
+        "shape": { "type": "UmlActivity", "shape": "Action" },
+        "annotations": [
+          {
+            "content": "Airlines Groups"
+          }
+       ]
+       
+      },
+      
+      {
+        "id": "NewIdea5",
+        "height": 25,
+        "width": 45,
+        "style": {
+         "strokewidth": 2
+        },
+        "offsetX": 550,
+       "offsetY": 280,
+        "shape": { "type": "UmlActivity", "shape": "Decision" },
+        "annotations": [
+          {
+            "content": ""
+          }
+       ]
+         
+      },
+      {
+        "id": "NewIdea6",
+        "height": 35,
+        "width": 80,
+        "style": {
+         "strokewidth": 2
+        },
+        "offsetX": 750,
+       "offsetY": 280,
+        "shape": { "type": "UmlActivity", "shape": "Action" },
+        "annotations": [
+          {
+            "content": "Manufacture"
+          }
+       ]
+        
+      },
+      {
+        "id": "NewIdea7",
+        "height": 30,
+        "width": 55,
+        "style": {
+         "strokewidth": 2
+        },
+        "offsetX": 500,
+       "offsetY": 220,
+       "rotateAngle":337,
+        "shape": { "type": "UmlActivity", "shape": "Decision" },
+        "annotations": [
+          {
+            "content": "test"
+          }
+       ]
+      
+      },
+      {
+        "id": "NewIdea8",
+        "height": 25,
+        "width": 45,
+        "style": {
+         "strokewidth": 2
+        },
+        "offsetX": 760,
+       "offsetY": 130,
+       "rotateAngle":343,
+        "shape": { "type": "UmlActivity", "shape": "Decision" },
+        "annotations": [
+          {
+            "content": ""
+          }
+       ],
+        "tooltip":{
+          "content":"this is test2"
+             }
+   
+      },
+      {
+        "id": "NewIdea9",
+        "height": 25,
+        "width": 45,
+        "style": {
+         "strokewidth": 2
+        },
+        "offsetX": 595,
+       "offsetY": 185,
+       "rotateAngle":343,
+        "shape": { "type": "UmlActivity", "shape": "Decision" },
+        "annotations": [
+          {
+            "content": ""
+          }
+       ]
+     
+      }
+]
