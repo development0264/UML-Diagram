@@ -3,3 +3,8 @@
       top: 235px;
       left: 260px;
 }
+
+
+g#located\ in_groupElement text {
+  transform: translate(470px, 280px);
+}
