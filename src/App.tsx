@@ -10,7 +10,7 @@ import {
   SnapConstraints
 } from "@syncfusion/ej2-react-diagrams";
 
-import ExampleA from './Examples/ExampleA'
+import Home from './Home'
 
 import styled from 'styled-components';
 
@@ -340,11 +340,12 @@ export default class App extends React.Component<{}, {}> {
   //      connector:[]
   //   }
   // }
- 
+  
   render() {
+
     return (
-      <div >
-        <ExampleA/>
+      <div>
+          <Home />
       {/* <DiagramComponentCustom colors={[{nodeName:"NewIdea",color:"green"},{nodeName:"NewIdea2",color:"red"},{nodeName:"NewIdea3",color:"blue"},{nodeName:"NewIdea4",color:"purple"},{nodeName:"NewIdea6",color:"yellow"}]}>
         <DiagramComponent
           id="diagram"
