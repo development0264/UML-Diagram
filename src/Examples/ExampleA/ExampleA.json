@@ -1,0 +1,28 @@
+{
+    "name":"Example_A",
+    "paths":[
+        {
+            "name":"A1",
+            "nodes":[
+                {
+                    "name":"Airport"
+                },
+                {
+                    "name":"Country"
+                }
+                
+            ],
+            "edges":[
+                {
+                    "name":"located in",
+                    "start":{
+                        "name":"Airport"
+                    },
+                    "end":{
+                        "name":"Country"
+                    }
+                }
+            ]
+        }
+    ]
+}

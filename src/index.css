@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.btn-default {
+  padding: 1em 1em !important;
+  text-decoration: none !important;
+  transition: 0.4s background-color, 0.4s color !important;
+  vertical-align: bottom !important;
+  border-radius: 0 !important;
+  line-height: 0.5em !important;
+  color: #fff;
+  background: #000;
+  border: solid 0.0625em #000;
+  font-weight: bold;
+
+ 
+}
+.btn-default:hover {
+  color:#000;
+  background: #fff;
+}
+.btn-section{
+  margin-left: 360px;
+}

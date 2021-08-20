@@ -10,46 +10,7 @@ import {
   SnapConstraints
 } from "@syncfusion/ej2-react-diagrams";
 
-import ExampleA from './Examples/ExampleA'
-
-import styled from 'styled-components';
-
-import exampleData from './navigation_path_example (1).json'
-
-interface ColorProps{
-  color:String;
-  nodeName:String;
-}
-interface Props{
-  colors: Array<ColorProps>;
-  
-}
-// export const DivCustom:React.FC <Props> = ({children}) => {
-//   console.log("colors :  ",children);
-//   return (
-//      <div>{children}</div>
-//   )
-// }
-const DiagramComponentCustom = styled.div<Props>` 
-${props=>props.colors.map(item=>
-  `#${item.nodeName}_groupElement:hover , #${item.nodeName}_groupElement:hover *{
-    stroke: ${item.color};
-  }
-  #${item.nodeName}_groupElement:hover text {
-    fill: ${item.color} !important;
-  }`
-  )}
-
-`
-
-// #NewIdea_groupElement:hover , #NewIdea_groupElement:hover *{
-//   stroke: ${props=>props.color};
-// }
-// #NewIdea_groupElement:hover text {
-//   fill:   ${props=>props.color} !important;
-// }
-
-
+import Home from '../src/Home'
 
 // A node is created and stored in nodes array.
 let node: NodeModel[] = [
@@ -333,34 +294,10 @@ constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.R
 ];
 
 export default class App extends React.Component<{}, {}> {
-  // constructor(props: { props: any; } | Readonly<{ props: any; }>){
-  //   super(props)
-  //   this.state={
-  //      node:[],
-  //      connector:[]
-  //   }
-  // }
- 
   render() {
     return (
-      <div >
-        <ExampleA/>
-      {/* <DiagramComponentCustom colors={[{nodeName:"NewIdea",color:"green"},{nodeName:"NewIdea2",color:"red"},{nodeName:"NewIdea3",color:"blue"},{nodeName:"NewIdea4",color:"purple"},{nodeName:"NewIdea6",color:"yellow"}]}>
-        <DiagramComponent
-          id="diagram"
-          className="sb-mobile-palette-bar"
-          width={"100%"}
-          height={"600px"}
-          // Add node
-          connectors={connectors}
-          nodes={node}
-          constraints = {
-            DiagramConstraints.Default 
-        }
-          snapSettings={{ constraints: SnapConstraints.None }}
-        // render initialized Diagram
-        />
-        </DiagramComponentCustom> */}
+      <div>
+          <Home />
       </div>
     );
   }

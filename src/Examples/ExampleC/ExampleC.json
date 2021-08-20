@@ -1,0 +1,49 @@
+{
+    "name": "Example_C",
+    "paths": [
+      {
+        "name": "C1",
+        "nodes": [
+          {
+            "name": "Airline"
+          },
+          {
+            "name": "Airport"
+          }
+        ],
+        "edges": [
+          {
+            "name": "landing at",
+            "start": {
+              "name": "Airline"
+            },
+            "end": {
+              "name": "Airport"
+            }
+          }
+        ]
+      },
+      {
+        "name": "C2",
+        "nodes": [
+          {
+            "name": "Country"
+          }
+        ],
+        "edges": [
+          {
+            "name": "located in",
+            "start": {
+              "name": "Airport"
+            },
+            "end": {
+              "name": "Country"
+            }
+          }
+        ]
+      }
+    ]
+  }
+
+
+
