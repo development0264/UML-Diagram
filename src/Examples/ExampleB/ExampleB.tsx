@@ -53,7 +53,7 @@ export default class ExampleB extends React.Component<{}, {node:NodeModel[],conn
         ExampleBData.paths[0].nodes.map((item,index)=>{
             
         if(index>0){
-          offsetY+=400;
+          offsetY+=300;
         }
         nodeColorList.push({
           color:colors[Math.floor(Math.random()*colors.length)],
@@ -65,7 +65,7 @@ export default class ExampleB extends React.Component<{}, {node:NodeModel[],conn
             height:35,
             width: 80,
             offsetX: offsetY,
-            offsetY:300,
+            offsetY:index==1?150:200,
             style: {
               strokeWidth: 2,
             },
@@ -91,7 +91,7 @@ export default class ExampleB extends React.Component<{}, {node:NodeModel[],conn
                 height:35,
                 width: 80,
                 offsetX: 350,
-                offsetY:350,
+                offsetY:100,
                 style: {
                   strokeWidth: 2,
                 },
@@ -152,16 +152,16 @@ export default class ExampleB extends React.Component<{}, {node:NodeModel[],conn
     return (
       <div >
       {this.state.node.length > 0 ?<DiagramComponentCustom colors={this.state.nodeColorList}>
-        <div className="graphName">{ExampleBData.name}</div>
+        <div className="graphName" >{ExampleBData.name}</div>
         <DiagramComponent
-          id="diagram"
+          id="diagramB"
           width={"100%"}
-          height={"400px"}
+          height={"240px"}
           // Add node
            connectors={this.state.connector}
           nodes={this.state.node}
           constraints = {
-            DiagramConstraints.Default 
+            DiagramConstraints.Default & ~DiagramConstraints.PageEditable
         }
           snapSettings={{ constraints: SnapConstraints.None }}
         // render initialized Diagram

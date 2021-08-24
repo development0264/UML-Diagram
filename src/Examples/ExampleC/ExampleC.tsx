@@ -49,12 +49,12 @@ export default class ExampleC extends React.Component<{}, {node:NodeModel[],conn
       const nodeColorList : ColorProps[]=[];
       const colors = ["silver","orange","maroon","green","blue","red","yellow","pink","gold","Cyan"];
 
-      var offsetY =50;
+      var offsetY = 0;
         ExampleCdata.paths.map((itm)=>{
         itm.nodes.map((item,index)=>{
-     
+
           offsetY+=300;
-     
+
         nodeColorList.push({
           color:colors[Math.floor(Math.random()*colors.length)],
           nodeName:item.name
@@ -65,7 +65,7 @@ export default class ExampleC extends React.Component<{}, {node:NodeModel[],conn
             height:35,
             width: 80,
             offsetX: offsetY,
-            offsetY:300,
+            offsetY:100,
             style: {
               strokeWidth: 2,
             },
@@ -82,7 +82,6 @@ export default class ExampleC extends React.Component<{}, {node:NodeModel[],conn
       })
       ExampleCdata.paths.map((itm)=>{
       itm.edges.map((item,index)=>{
-      
         connectors.push({
           id: itm.name,
           sourceID: item.start.name,
@@ -111,16 +110,16 @@ export default class ExampleC extends React.Component<{}, {node:NodeModel[],conn
     return (
       <div >
       {this.state.node.length > 0 ?<DiagramComponentCustom colors={this.state.nodeColorList}>
-        <div className="graphName">{ExampleCdata.name}</div>
+        <div className="graphName" >{ExampleCdata.name}</div>
         <DiagramComponent
-          id="diagram"
+          id="diagramc"
           width={"100%"}
-          height={"400px"}
+          height={"200px"}
           // Add node
            connectors={this.state.connector}
           nodes={this.state.node}
           constraints = {
-            DiagramConstraints.Default 
+            DiagramConstraints.Default & ~DiagramConstraints.PageEditable
         }
           snapSettings={{ constraints: SnapConstraints.None }}
         // render initialized Diagram

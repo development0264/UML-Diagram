@@ -53,10 +53,10 @@ export default class ExampleE extends React.Component<{}, {node:NodeModel[],conn
         itm.nodes.map((item,index)=>{
      if(index<2){
          if(index<1){
-            offsetY+=350;
+            offsetY+=300;
          }
          else{
-          offsetY+=670;
+          offsetY+=600;
          }
         nodeColorList.push({
           color:colors[Math.floor(Math.random()*colors.length)],
@@ -68,7 +68,7 @@ export default class ExampleE extends React.Component<{}, {node:NodeModel[],conn
             height:35,
             width: 80,
             offsetX: offsetY,
-            offsetY:300,
+            offsetY:100,
             style: {
               strokeWidth: 2,
             },
@@ -90,8 +90,8 @@ export default class ExampleE extends React.Component<{}, {node:NodeModel[],conn
                   id:item.name,
                   height:35,
                   width: 80,
-                  offsetX: 700,
-                  offsetY:300,
+                  offsetX: 600,
+                  offsetY:100,
                   style: {
                     strokeWidth: 2,
                   },
@@ -163,12 +163,12 @@ export default class ExampleE extends React.Component<{}, {node:NodeModel[],conn
         <DiagramComponent
           id="diagram"
           width={"100%"}
-          height={"400px"}
+          height={"200px"}
           // Add node
            connectors={this.state.connector}
           nodes={this.state.node}
           constraints = {
-            DiagramConstraints.Default 
+            DiagramConstraints.Default & ~DiagramConstraints.PageEditable
         }
           snapSettings={{ constraints: SnapConstraints.None }}
         // render initialized Diagram

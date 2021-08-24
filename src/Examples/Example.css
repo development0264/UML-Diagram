@@ -1,10 +1,10 @@
 .graphName{
-    position: absolute;
-      top: 235px;
-      left: 260px;
+  margin-left: 15px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 
-g#located\ in_groupElement text {
+/* g#located\ in_groupElement text {
   transform: translate(470px, 280px);
-}
+} */
