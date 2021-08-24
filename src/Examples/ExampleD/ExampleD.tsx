@@ -49,7 +49,7 @@ export default class ExampleD extends React.Component<{}, {node:NodeModel[],conn
       const nodeColorList : ColorProps[]=[];
       const colors = ["silver","orange","maroon","green","blue","red","yellow","pink","gold","Cyan"];
 
-      var offsetY =50;
+      var offsetY =0;
         ExampleDdata.paths.map((itm,index)=>{
         if(index<2){
         itm.nodes.map((item,index)=>{
@@ -66,7 +66,7 @@ export default class ExampleD extends React.Component<{}, {node:NodeModel[],conn
             height:35,
             width: 80,
             offsetX: offsetY,
-            offsetY:300,
+            offsetY:100,
             style: {
               strokeWidth: 2,
             },
@@ -126,22 +126,22 @@ export default class ExampleD extends React.Component<{}, {node:NodeModel[],conn
                         // Defines the type of the segment
                         type: 'Bezier',
                         point1: {
-                            x: 600,
-                            y: 380
+                            x: 500,
+                            y: 280
                         },
                         // Second control point: an absolute position from the page origin
                         point2: {
                             x: 700,
-                            y: 380
+                            y: 280
                         }
                     }],
                     sourcePoint: {
-                        x: 500,
-                        y: 400
+                        x: 400,
+                        y: 300
                     },
                     targetPoint: {
-                        x: 900,
-                        y: 400
+                        x: 800,
+                        y: 300
                     },
                 },)
             })
@@ -158,16 +158,16 @@ export default class ExampleD extends React.Component<{}, {node:NodeModel[],conn
     return (
       <div >
       {this.state.node.length > 0 ?<DiagramComponentCustom colors={this.state.nodeColorList}>
-        <div className="graphName">{ExampleDdata.name}</div>
+        <div className="graphName" >{ExampleDdata.name}</div>
         <DiagramComponent
-          id="diagram"
+          id="diagramD"
           width={"100%"}
-          height={"400px"}
+          height={"240px"}
           // Add node
           connectors={this.state.connector}
           nodes={this.state.node}
           constraints = {
-            DiagramConstraints.Default 
+            DiagramConstraints.Default & ~DiagramConstraints.PageEditable
         }
           snapSettings={{ constraints: SnapConstraints.None }}
         // render initialized Diagram

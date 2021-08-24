@@ -64,7 +64,7 @@ export default class ExampleA extends React.Component<{}, {node:NodeModel[],conn
             height:35,
             width: 80,
             offsetX: offsetY,
-            offsetY:300,
+            offsetY:100,
             style: {
               strokeWidth: 2,
             },
@@ -89,7 +89,7 @@ export default class ExampleA extends React.Component<{}, {node:NodeModel[],conn
               },
               annotations: [{
                 // Sets the text to be diaplayed
-               
+                verticalAlignment: 'Top',
                 content: item.name
               }],
                constraints: NodeConstraints.Default &~(NodeConstraints.Drag | NodeConstraints.Resize |NodeConstraints.Select)
@@ -103,20 +103,20 @@ export default class ExampleA extends React.Component<{}, {node:NodeModel[],conn
   }
   render() {
     return (
-      <div >
+      <div style={{borderWidth:1}}>
       {this.state.node.length > 0 ?<DiagramComponentCustom colors={this.state.nodeColorList}>
-        <div className="graphName">{ExampleAData.name}</div>
+        <div className="graphName" >{ExampleAData.name}</div>
         <DiagramComponent
-          id="diagram"
+          id="diagramA"
           width={"100%"}
-          height={"400px"}
+           height={"200px"}
           // Add node
            connectors={this.state.connector}
           nodes={this.state.node}
           constraints = {
-            DiagramConstraints.Default 
+            DiagramConstraints.Default & ~DiagramConstraints.PageEditable
         }
-          snapSettings={{ constraints: SnapConstraints.None }}
+          snapSettings={{ constraints: SnapConstraints.None  }}
         // render initialized Diagram
         />
         </DiagramComponentCustom>:<div>loading...</div>}
